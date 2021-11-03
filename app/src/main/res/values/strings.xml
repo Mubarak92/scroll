@@ -1,0 +1,15 @@
+<resources>
+    <string name="app_name">Scroll_months</string>
+    <string name="month1">1-January</string>
+    <string name="month2">2-February</string>
+    <string name="month3">3-March</string>
+    <string name="month4">4-April</string>
+    <string name="month5">5-May</string>
+    <string name="month6">6-June</string>
+    <string name="month7">7-July</string>
+    <string name="month8">8-August</string>
+    <string name="month9">9- September</string>
+    <string name="month10">10-October</string>
+    <string name="month11">11- November</string>
+    <string name="month12">12- December</string>
+</resources>
