@@ -1,15 +1,36 @@
 <resources>
-    <string name="app_name">Scroll_months</string>
-    <string name="month1">1-January</string>
-    <string name="month2">2-February</string>
-    <string name="month3">3-March</string>
-    <string name="month4">4-April</string>
-    <string name="month5">5-May</string>
-    <string name="month6">6-June</string>
-    <string name="month7">7-July</string>
-    <string name="month8">8-August</string>
-    <string name="month9">9- September</string>
-    <string name="month10">10-October</string>
-    <string name="month11">11- November</string>
-    <string name="month12">12- December</string>
+    <string name="app_name">products</string>
+    <string name="product1">iPhone 13 Pro</string>
+    <string name="product2">iPhone 12</string>
+    <string name="product3">Xiaomi 11T Pro</string>
+    <string name="product4">Samsung S21 Ultra</string>
+    <string name="product5">May</string>
+    <string name="product6">Samsung Flip</string>
+
+    <string name="descript1">Screen Size: 6.1 inches\n
+    Chipset: Apple A15 Bionic\n
+    Internal storage: 128gb\n\n
+        <b>Price: 4000SR</b></string>
+    <string name="descript2">Screen Size: 6.1 inches\n
+    Chipset: Apple A15 Bionic\n
+    Internal storage: 128gb\n\n
+    Price: 3000SR</string>
+    <string name="descript3">Screen Size: 6.64 inches\n
+    Chipset: Qualcomm SM8350 Snapdragon 888 5G\n
+    Internal storage: 128gb\n\n
+    Price: 1800</string>
+    <string name="descript4">Screen Size: 6.8 inches\n
+    Chipset: Qualcomm SM8350 Snapdragon 888 5G\n
+    Internal storage: 256gb\n\n
+    Price: 2500SR</string>
+    <string name="descript5">Screen Size: 6.3 inches\n
+    Chipset: Mediatek MT6762R Helio P22\n
+    Internal storage: 128gb\n\n
+    Price: 1500SR</string>
+    <string name="descript6">Screen Size: 6.7 inches\n
+    Chipset: Qualcomm SM8350 Snapdragon 888 5G\n
+    Internal storage: 128gb\n\n
+    Price: 8000SR</string>
+
+
 </resources>

@@ -6,18 +6,12 @@ import com.example.scroll.model.Scroll
 class Datasource {
     fun loadScroll():List<Scroll>{
         return listOf<Scroll>(
-            Scroll(R.string.month1,R.drawable.january),
-            Scroll(R.string.month2,R.drawable.feb),
-            Scroll(R.string.month3, R.drawable.march),
-            Scroll(R.string.month4, R.drawable.april),
-            Scroll(R.string.month5, R.drawable.may),
-            Scroll(R.string.month6, R.drawable.june),
-            Scroll(R.string.month7, R.drawable.july),
-            Scroll(R.string.month8, R.drawable.augest),
-            Scroll(R.string.month9, R.drawable.september),
-            Scroll(R.string.month10, R.drawable.october),
-            Scroll(R.string.month11, R.drawable.november),
-            Scroll(R.string.month12, R.drawable.december)
+            Scroll(R.string.product1,R.drawable.iphone13,R.drawable.apple_logo,R.string.descript1,true,8),
+            Scroll(R.string.product2,R.drawable.iphone12,R.drawable.apple_logo,R.string.descript2,false,5),
+            Scroll(R.string.product3, R.drawable.huawei_1, R.drawable.ni,R.string.descript3,true,0),
+            Scroll(R.string.product4, R.drawable.ult,R.drawable.samsung_log,R.string.descript4,false,0),
+            Scroll(R.string.product5, R.drawable.huawei_y6,R.drawable.huawei_logo,R.string.descript5,true,70),
+            Scroll(R.string.product6, R.drawable.galaxyfold,R.drawable.samsung_log,R.string.descript6,true,36),
 
         )
     }

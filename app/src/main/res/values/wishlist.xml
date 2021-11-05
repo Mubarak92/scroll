@@ -1,0 +1,10 @@
+<resources>
+
+    <bool name="wish1">true</bool>
+    <bool name="wish2">true</bool>
+    <bool name="wish3">true</bool>
+    <bool name="wish4">true</bool>
+    <bool name="wish5">true</bool>
+    <bool name="wish6">true</bool>
+
+</resources>

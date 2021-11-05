@@ -1,4 +1,9 @@
 package com.example.scroll.model
 
-data class Scroll (val stringId: Int,val imageId:Int){
+import androidx.annotation.DrawableRes
+import androidx.annotation.StringRes
+
+data class Scroll(
+    @StringRes val stringId: Int, @DrawableRes val imageId: Int, val companyId: Int, val descript: Int, val wishlistId: Boolean, val quanityId: Int
+) {
 }

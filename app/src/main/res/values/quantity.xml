@@ -1,0 +1,10 @@
+<resources>
+
+    <integer name="quantity1">5</integer>
+    <integer name="quantity2">5</integer>
+    <integer name="quantity3">0</integer>
+    <integer name="quantity4">0</integer>
+    <integer name="quantity5">70</integer>
+    <integer name="quantity6">36</integer>
+
+</resources>
