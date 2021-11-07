@@ -28,7 +28,11 @@ class buypage : AppCompatActivity() {
 
         val name1 = findViewById<TextView>(R.id.buy_name).apply { text = " $name " }
         val descript1 = findViewById<TextView>(R.id.buy_descript).apply { text = "$descript" }
-        val image1 = findViewById<ImageView>(R.id.buy_image).apply {  image  }
+        val image1 = findViewById<ImageView>(R.id.buy_image).apply {
+            if (image != null) {
+                setImageResource(image)
+            }
+        }
 
 
     }

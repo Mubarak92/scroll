@@ -63,7 +63,7 @@ class ItemAdapter(
 
                 intent.putExtra("phoneName",holder.textView.text)
                 intent.putExtra("PhoneDescript",holder.textView2.text)
-                intent.putExtra("phoneImage", holder.imageView.autofillValue)
+                intent.putExtra("phoneImage", item.imageId) // here is the error
 
                 it.context.startActivity(intent)
 
