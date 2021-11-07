@@ -23,11 +23,11 @@ class ItemAdapter(
 
     class ItemViewHolder(private val view: View) : RecyclerView.ViewHolder(view) {
         val textView: TextView = view.findViewById(R.id.item_title)
-        val imageView: ImageView = view.findViewById(R.id.months)
+        val imageView: ImageView = view.findViewById(R.id.products)
         val textView2: TextView = view.findViewById(R.id.textView)
         val imageView2: ImageView = view.findViewById(R.id.logo)
         val isvip: ImageView = view.findViewById(R.id.isVip)
-         val rating: RatingBar = view.findViewById(R.id.rb_ratingBar)
+        //val rating: RatingBar = view.findViewById(R.id.rb_ratingBar)
         val wishlist: CheckBox = view.findViewById(R.id.wishlist)// a Quation here
         val buy: Button = view.findViewById(R.id.button)
 
