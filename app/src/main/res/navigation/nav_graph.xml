@@ -3,7 +3,7 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/nav_graph"
-    app:startDestination="@id/buy">
+    app:startDestination="@id/store">
 
 
     <fragment
@@ -19,6 +19,15 @@
         android:id="@+id/buy"
         android:name="com.example.scroll.Buy"
         android:label="fragment_buy"
-        tools:layout="@layout/fragment_buy" />
+        tools:layout="@layout/fragment_buy" >
+        <argument android:name="phoneName"
+            app:argType="string" />
+        <argument
+            android:name="phoneDescript"
+            app:argType="string" />
+        <argument
+            android:name="imagePhone"
+            app:argType="integer" />
+    </fragment>
 
 </navigation>

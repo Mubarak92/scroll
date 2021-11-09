@@ -19,19 +19,19 @@ class Buy : Fragment() {
         val PHONEDESCRIPT = "PhoneDescript"
         val PHONEIMAGE = "phoneImage"
     }
- var _binding:FragmentBuyBinding?=null
+
+    var _binding: FragmentBuyBinding? = null
     val binding get() = _binding!!
 
-    private lateinit var name:String
-    private lateinit var descript:String
-    private lateinit var image:String
+    private lateinit var name: String
+    private lateinit var descript: String
+    private lateinit var image: String
 
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
 
-       setHasOptionsMenu(true)
-
+        setHasOptionsMenu(false)
 
 
     }
@@ -41,7 +41,7 @@ class Buy : Fragment() {
         container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
-        _binding = FragmentBuyBinding.inflate(inflater,container,false)
+        _binding = FragmentBuyBinding.inflate(inflater, container, false)
         return binding.root
     }
 
@@ -49,14 +49,16 @@ class Buy : Fragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         arguments?.let {
 
+
             binding.textView.text = it.getString("phoneName").toString()
-            binding.textView.text = it.getString("PHONEDESCRIPT").toString()
+            binding.textView2.text = it.getString("phoneDescript").toString()
+            binding.imageView.setImageResource(it.getInt("imagePhone"))
         }
     }
 
-        override fun onDestroyView() {
-            super.onDestroyView()
-            _binding = null
-        }
-
+    override fun onDestroyView() {
+        super.onDestroyView()
+        _binding = null
     }
+
+}

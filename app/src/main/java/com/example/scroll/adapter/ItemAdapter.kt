@@ -6,9 +6,11 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.*
+import androidx.navigation.findNavController
 import androidx.recyclerview.widget.RecyclerView
 import com.example.scroll.R
 import com.example.scroll.Store
+import com.example.scroll.StoreDirections
 import com.example.scroll.data.Datasource
 
 
@@ -18,11 +20,11 @@ class ItemAdapter(
 )
 : RecyclerView.Adapter<ItemAdapter.ItemViewHolder>() {
 
-    val dataset =Datasource().loadScroll()
+    val dataset = Datasource().loadScroll()
 
 
     class ItemViewHolder(private val view: View) : RecyclerView.ViewHolder(view) {
-        val textView: TextView = view.findViewById(R.id.item_title)
+        val textView: TextView = view.findViewById<TextView>(R.id.item_title)
         val imageView: ImageView = view.findViewById(R.id.products)
         val textView2: TextView = view.findViewById(R.id.textView)
         val imageView2: ImageView = view.findViewById(R.id.logo)
@@ -38,11 +40,12 @@ class ItemAdapter(
         val adapterLayout = LayoutInflater.from(parent.context)
             .inflate(R.layout.list_item, parent, false)
 
+
         return ItemViewHolder(adapterLayout)
     }
 
-    @SuppressLint("SetTextI18n")
     override fun onBindViewHolder(holder: ItemViewHolder, position: Int) {
+
         val item = dataset[position]
         holder.textView.text = context.resources.getString(item.stringId)
         holder.textView2.text = context.resources.getString(item.descript)
@@ -54,9 +57,14 @@ class ItemAdapter(
             if (item.quanityId > 0) {
                 Toast.makeText(holder.buy.context, "Available", Toast.LENGTH_SHORT).show()
 
+
+                val action = StoreDirections.actionStoreToBuy(phoneName = context.resources.getString(item.stringId),phoneDescript = context.resources.getString(item.descript)
+                ,imagePhone = item.imageId)
+
+holder.itemView.findNavController().navigate(action)
             //    val intent = Intent (context,buypage::class.java)
 
-//
+
 //                intent.putExtra("phoneName",item.stringId)
 //                intent.putExtra("PhoneDescript",item.descript)
 //                intent.putExtra("phoneImage",item.imageId)

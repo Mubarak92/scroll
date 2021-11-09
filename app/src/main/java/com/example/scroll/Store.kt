@@ -27,6 +27,7 @@ class Store : Fragment() {
     }
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
 binding.recyclerview.adapter = ItemAdapter(this,context)
+//binding.recyclerview.setHasFixedSize(true)
 
     }
 
