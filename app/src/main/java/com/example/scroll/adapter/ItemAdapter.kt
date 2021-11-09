@@ -12,7 +12,6 @@ import android.widget.*
 import androidx.core.view.isVisible
 import androidx.recyclerview.widget.RecyclerView
 import com.example.scroll.R
-import com.example.scroll.buypage
 import com.example.scroll.model.Scroll
 
 
@@ -54,18 +53,18 @@ class ItemAdapter(
             if (item.quanityId > 0) {
                 Toast.makeText(holder.buy.context, "Available", Toast.LENGTH_SHORT).show()
 
-                val intent = Intent (context,buypage::class.java)
+            //    val intent = Intent (context,buypage::class.java)
 
 //
 //                intent.putExtra("phoneName",item.stringId)
 //                intent.putExtra("PhoneDescript",item.descript)
 //                intent.putExtra("phoneImage",item.imageId)
 
-                intent.putExtra("phoneName",holder.textView.text)
-                intent.putExtra("PhoneDescript",holder.textView2.text)
-                intent.putExtra("phoneImage", item.imageId) // here is the error
-
-                it.context.startActivity(intent)
+//                intent.putExtra("phoneName",holder.textView.text)
+//                intent.putExtra("PhoneDescript",holder.textView2.text)
+//                intent.putExtra("phoneImage", item.imageId) // here is the error
+//
+//                it.context.startActivity(intent)
 
 
             } else {

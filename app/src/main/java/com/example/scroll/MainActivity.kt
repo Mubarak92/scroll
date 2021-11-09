@@ -3,21 +3,36 @@ package com.example.scroll
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import androidx.navigation.NavController
+import androidx.navigation.fragment.NavHostFragment
+import androidx.navigation.ui.setupActionBarWithNavController
 import androidx.recyclerview.widget.RecyclerView
 import com.example.scroll.adapter.ItemAdapter
 import com.example.scroll.data.Datasource
+import com.example.scroll.databinding.ActivityMainBinding
 
 class MainActivity : AppCompatActivity() {
 
+    private lateinit var navController: NavController
+
+    lateinit var binding: ActivityMainBinding
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
 
-            val myDataset = Datasource().loadScroll()
+         binding = ActivityMainBinding.inflate(layoutInflater)
+        setContentView(binding.root)
 
-            val recyclerView = findViewById<RecyclerView>(R.id.recycler_view)
-            recyclerView.adapter = ItemAdapter(this, myDataset)
+        val navHostFragment = supportFragmentManager
+            .findFragmentById(R.id.nav_host_fragment) as NavHostFragment
 
-            recyclerView.setHasFixedSize(true)
-        }
+//            val myDataset = Datasource().loadScroll()
+
+        navController = navHostFragment.navController
+        setupActionBarWithNavController(navController)
+
+    }
+    override fun onSupportNavigateUp(): Boolean {
+        return navController.navigateUp() || super.onSupportNavigateUp()
+    }
     }

@@ -5,17 +5,16 @@ import android.os.Bundle
 import android.widget.ImageView
 import android.widget.TextView
 import androidx.appcompat.app.AppCompatActivity
-import androidx.core.graphics.drawable.toDrawable
-import kotlinx.android.synthetic.main.activity_buypage.view.*
+import com.example.scroll.databinding.ActivityBuypageBinding
 
 
-//lateinit var binding: ActivityBuypageBinding
 class buypage : AppCompatActivity() {
+lateinit var binding: ActivityBuypageBinding
     @SuppressLint("SetTextI18n")
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-//        binding = ActivityBuypageBinding.inflate(layoutInflater)
-//        setContentView(binding.root)
+        binding = ActivityBuypageBinding.inflate(layoutInflater)
+        setContentView(binding.root)
 
         setContentView(R.layout.activity_buypage)
 
