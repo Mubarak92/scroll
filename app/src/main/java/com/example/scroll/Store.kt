@@ -1,16 +1,14 @@
 package com.example.scroll
 
-import android.content.Context
 import android.os.Bundle
 import android.view.*
 import androidx.fragment.app.Fragment
 import com.example.scroll.adapter.ItemAdapter
-import com.example.scroll.databinding.FragmentBuyBinding
-
+import com.example.scroll.databinding.FragmentStoreBinding
 
 
 class Store : Fragment() {
-    private var _binding :FragmentBuyBinding? = null
+    private var _binding :FragmentStoreBinding? = null
 
     private val binding get() = _binding!!
 
@@ -24,11 +22,12 @@ class Store : Fragment() {
         container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
-        _binding = FragmentBuyBinding.inflate(inflater,container,false)
+        _binding = FragmentStoreBinding.inflate(inflater,container,false)
         return binding.root
     }
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
-binding
+binding.recyclerview.adapter = ItemAdapter(this,context)
+
     }
 
     override fun onDestroy() {

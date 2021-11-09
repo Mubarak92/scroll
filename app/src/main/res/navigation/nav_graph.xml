@@ -3,22 +3,22 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/nav_graph"
-    app:startDestination="@id/buy2">
+    app:startDestination="@id/buy">
 
 
     <fragment
-        android:id="@+id/buy2"
+        android:id="@+id/store"
+        android:name="com.example.scroll.Store"
+        android:label="fragment_store"
+        tools:layout="@layout/fragment_store" >
+        <action
+            android:id="@+id/action_store_to_buy"
+            app:destination="@id/buy" />
+    </fragment>
+    <fragment
+        android:id="@+id/buy"
         android:name="com.example.scroll.Buy"
         android:label="fragment_buy"
         tools:layout="@layout/fragment_buy" />
-    <fragment
-        android:id="@+id/storePage"
-        android:name="com.example.scroll.Store"
-        android:label="fragment_store_page"
-        tools:layout="@layout/fragment_buy" >
-        <action
-            android:id="@+id/action_storePage_to_buy2"
-            app:destination="@id/buy2" />
-    </fragment>
 
 </navigation>

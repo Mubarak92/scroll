@@ -49,8 +49,8 @@ class Buy : Fragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         arguments?.let {
 
-            binding.textView.text = it.getString(PHONENAME).toString()
-            binding.textView.text = it.getString(PHONEDESCRIPT).toString()
+            binding.textView.text = it.getString("phoneName").toString()
+            binding.textView.text = it.getString("PHONEDESCRIPT").toString()
         }
     }
 

@@ -2,22 +2,23 @@ package com.example.scroll.adapter
 
 import android.annotation.SuppressLint
 import android.content.Context
-import android.content.Intent
-import android.graphics.Picture
-import android.media.Image
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.*
-import androidx.core.view.isVisible
 import androidx.recyclerview.widget.RecyclerView
 import com.example.scroll.R
-import com.example.scroll.model.Scroll
+import com.example.scroll.Store
+import com.example.scroll.data.Datasource
 
 
 class ItemAdapter(
-    private val context: Context, private val dataset: List<Scroll>
-) : RecyclerView.Adapter<ItemAdapter.ItemViewHolder>() {
+    private val context: Store,
+    context1: Context?
+)
+: RecyclerView.Adapter<ItemAdapter.ItemViewHolder>() {
+
+    val dataset =Datasource().loadScroll()
 
 
     class ItemViewHolder(private val view: View) : RecyclerView.ViewHolder(view) {
